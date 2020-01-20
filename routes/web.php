@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomepageController@index');
+Route::resources([
+    'products'  => 'ProductController',
+    'pages'     => 'PageController',
+    'categories' => 'CategoryController'
+]);
