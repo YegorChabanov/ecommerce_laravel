@@ -12,6 +12,7 @@ class Product extends Model
     {
         return 'slug';
     }
+
     public function category()
     {
         return $this->belongsTo(Category::class);

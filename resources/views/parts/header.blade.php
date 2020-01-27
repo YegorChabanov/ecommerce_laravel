@@ -47,6 +47,16 @@
                     </div>
                 </li>
 
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fab fa-cc-visa"></i>Orders<i class="fas fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="/orders" class="waves-effect">All orders</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
             </ul>
         </li>
 
@@ -71,14 +81,36 @@
                     <li class="nav-item">
                         <a class="nav-link dark-grey-text font-weight-bold" href="/pages/contact_us"><i class="fas fa-envelope blue-text"></i> Contact Us </a>
                     </li>
-                    <li class="nav-item dropdown ml-3">
-                        <a class="nav-link dropdown-toggle dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"><i class="fas fa-user blue-text"></i> Your Profile </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
-                            <a class="dropdown-item waves-effect waves-light" href="#">My account</a>
-                            <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>
-                        </div>
+                    <li class="nav-item ">
+                        <a class="nav-link dark-grey-text font-weight-bold waves-effect waves-light" href="/cart">
+                            @if(count(json_decode(request()->cookie('cart'), true)) > 0)
+                                <span class="badge danger-color">{{count(json_decode(request()->cookie('cart'), true))}}</span>
+                            @endif
+                            <i class="fas fa-shopping-cart blue-text" aria-hidden="true"></i>
+                            <span class="clearfix d-none d-sm-inline-block">Cart</span>
+                        </a>
                     </li>
+                    @if(Auth::check())
+                        <li class="nav-item dropdown ml-3">
+                            <a class="nav-link dropdown-toggle dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false"><i class="fas fa-user blue-text"></i> {{Auth::user()->name}} </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+                                <form method="post" action="/logout">
+                                    @csrf
+                                    <button class="dropdown-item waves-effect waves-light">Log out</button>
+                                </form>
+                            </div>
+                        </li>
+                    @else
+                        <li class="nav-item dropdown ml-3">
+                            <a class="nav-link dropdown-toggle dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false"><i class="fas fa-user blue-text"></i> Your Profile </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+                                <a class="dropdown-item waves-effect waves-light" href="/login">Log in</a>
+                                <a class="dropdown-item waves-effect waves-light" href="/register">Register</a>
+                            </div>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>

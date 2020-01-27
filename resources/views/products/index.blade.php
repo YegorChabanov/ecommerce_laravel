@@ -63,8 +63,8 @@
                         <div class="mt-5">
                             <div class="row mt-3 mb-4">
                                 <div class="col-md-12 text-center text-md-left text-md-right">
-                                    <button class="btn btn-primary btn-rounded waves-effect waves-light">
-                                        <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i> Add to cart</button>
+                                    <a class="btn btn-primary btn-rounded waves-effect waves-light" href="/cart/{{$product->slug}}">
+                                        <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i> Add to cart</a>
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,11 @@
 @section('content')
     <!-- /.Main Container -->
     <div class="container">
-
+        @if (session('status'))
+            <div class="alert alert-success text-center" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
         <!-- Grid row -->
         <div class="row pt-4">
 
@@ -105,7 +109,7 @@
                                             <span class="float-left"><strong>${{$topSellerProduct->price}}</strong></span>
                                             <span class="float-right">
 
-                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-shopping-cart ml-3"></i></a>
+                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart" href="/cart/{{$topSellerProduct->slug}}"><i class="fas fa-shopping-cart ml-3"></i></a>
                                                 </span>
                                         </div>
                                     </div>
@@ -257,7 +261,7 @@
                                         <div class="row mb-0">
                                             <span class="float-left"><strong>${{ $product->price }}</strong></span>
                                             <span class="float-right">
-                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-shopping-cart ml-3"></i></a>
+                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart" href="/cart/{{$product->slug}}"><i class="fas fa-shopping-cart ml-3"></i></a>
                                                 </span>
                                         </div>
                                     </div>
