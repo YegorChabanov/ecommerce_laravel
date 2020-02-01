@@ -20,12 +20,6 @@ class PagesTableSeeder extends Seeder
                 'content' => 'Offering quality products with the best prices! We hope you enjoy our products as much as we enjoy offering them to you.'
             ],
             [
-                'title' => 'Contact Us',
-                'slug' => 'contact_us',
-                'intro' => 'How can we help you?',
-                'content' => 'We’d love to hear from you! Whether you have a question about our products, shipping, or anything else, our team is ready to answer all your questions'
-            ],
-            [
                 'title' => 'Shipping Policy',
                 'slug' => 'shipping_policy',
                 'intro' => 'Free shipping for all orders, no matter what!',

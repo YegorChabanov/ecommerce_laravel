@@ -53,7 +53,7 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 class="text-uppercase font-weight-bold"><strong>Useful links</strong></h6>
                 <hr class="blue mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p><a href="/pages/contact_us">Contact Us</a></p>
+                <p><a href="/contacts">Contact Us</a></p>
                 <p><a href="/pages/about_us">About Us</a></p>
                 <p><a href="/pages/shipping_policy">Shipping Policy</a></p>
                 <p><a href="/pages/warranty_terms"">Warranty Terms</a></p>

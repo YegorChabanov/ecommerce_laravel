@@ -81,7 +81,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link dark-grey-text font-weight-bold" href="/pages/contact_us"><i class="fas fa-envelope blue-text"></i> Contact Us </a>
+                        <a class="nav-link dark-grey-text font-weight-bold" href="/contacts"><i class="fas fa-envelope blue-text"></i> Contact Us </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link dark-grey-text font-weight-bold waves-effect waves-light" href="/cart">

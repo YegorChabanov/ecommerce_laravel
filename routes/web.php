@@ -29,6 +29,9 @@ Route::post('/checkout', 'OrderController@store');
 // Show orders
 Route::get('/orders', 'OrderController@index');
 Route::get('/orders/{id}', 'OrderController@show');
+// Contact us form
+Route::get('/contacts', 'ContactFormController@index');
+Route::post('/contacts', 'ContactFormController@store');
 
 Auth::routes();
 
