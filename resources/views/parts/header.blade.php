@@ -67,10 +67,12 @@
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg  navbar-light scrolling-navbar white">
         <div class="container">
+            @if(Auth::check())
             <!-- SideNav slide-out button -->
             <div class="float-left mr-2">
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
             </div>
+            @endif
             <a class="navbar-brand font-weight-bold" href="/"><strong>eSHOP</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
                     aria-expanded="false" aria-label="Toggle navigation">

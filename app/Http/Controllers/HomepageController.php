@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CartOrderGenerator;
 use App\Category;
+use App\Order;
 use App\Page;
 use App\Product;
 use Illuminate\Http\Request;
