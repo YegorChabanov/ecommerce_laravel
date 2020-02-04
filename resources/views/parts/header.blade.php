@@ -85,8 +85,8 @@
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link dark-grey-text font-weight-bold waves-effect waves-light" href="/cart">
-                            @if(count(json_decode(request()->cookie('cart'), true)) > 0)
-                                <span class="badge danger-color">{{count(json_decode(request()->cookie('cart'), true))}}</span>
+                            @if(count($cartArray) > 0)
+                                <span class="badge danger-color">{{count($cartArray)}}</span>
                             @endif
                             <i class="fas fa-shopping-cart blue-text" aria-hidden="true"></i>
                             <span class="clearfix d-none d-sm-inline-block">Cart</span>
