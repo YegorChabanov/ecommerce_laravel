@@ -18,7 +18,7 @@
 
                     <!-- Grid row -->
                     <div class="row">
-                        @if(isset($aboutUsArticle))
+                        @if(isset($pages['about_us']))
                         <!--Grid column-->
                         <div class="col-lg-8 col-md-12 mb-3 pb-lg-2">
                             <!--Image -->
@@ -28,8 +28,8 @@
                                 <div class="mask rgba-white-light">
                                     <div class="dark-grey-text d-flex align-items-center pt-3 pl-4">
                                         <div>
-                                            <h2 class="card-title font-weight-bold pt-2"><strong>{{$aboutUsArticle->title}}</strong></h2>
-                                            <p class="">{{$aboutUsArticle->intro}}</p>
+                                            <h2 class="card-title font-weight-bold pt-2"><strong>{{$pages['about_us']['title']}}</strong></h2>
+                                            <p class="">{{$pages['about_us']['intro']}}</p>
                                             <a class="btn btn-danger btn-sm btn-rounded clearfix d-none d-md-inline-block" href="/pages/about_us">Read more</a>
                                         </div>
                                     </div>
@@ -40,9 +40,9 @@
                         </div>
                         <!--Grid column-->
                         @endif
+
                         <!--Grid column-->
                         <div class="col-lg-4 col-md-12 mb-4">
-
                             <!-- Section: Categories -->
                             <section class="section">
                                 <ul class="list-group z-depth-1">
@@ -132,8 +132,8 @@
                 <!--Section: Advertising-->
                 <section>
 
+                    @if(isset($pages['sale_10_on_every_smartphone']))
                     <!--Grid row-->
-                    @if(isset($saleArticle))
                     <div class="row">
                         <!--Grid column-->
                         <div class="col-12">
@@ -147,27 +147,25 @@
                                                 <span class="badge badge-primary">SALE</span>
                                             </a>
                                             <h2 class="card-title font-weight-bold pt-md-3 pt-1">
-                                                <strong>{{$saleArticle->title}}</strong>
+                                                <strong>{{$pages['sale_10_on_every_smartphone']['title']}}</strong>
                                             </h2>
-                                            <p class="pb-lg-3 pb-md-1 clearfix d-none d-md-block">{{$saleArticle->intro}}</p>
+                                            <p class="pb-lg-3 pb-md-1 clearfix d-none d-md-block">{{$pages['sale_10_on_every_smartphone']['intro']}}</p>
                                             <a class="btn mr-0 btn-primary btn-rounded clearfix d-none d-md-inline-block" href="/pages/sale_10_on_every_smartphone">Read more</a>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!--Image -->
                         </div>
                         <!--Grid column-->
                     </div>
+                    <!--Grid row-->
                     @endif
-                <!--Grid row-->
 
                     <!-- Grid row -->
                     <div class="row mt-4 pt-1">
-
+                        @if(isset($pages['order_returns']))
                         <!--Grid column-->
-                        @if(isset($orderReturnsArticle))
                         <div class="col-lg-8 col-md-12 mb-3 mb-md-4 pb-lg-2">
                             <!--Image -->
                             <div class="view zoom z-depth-1">
@@ -175,8 +173,8 @@
                                 <div class="mask rgba-white-light">
                                     <div class="dark-grey-text d-flex align-items-center pt-4 ml-lg-3 pl-lg-3 pl-md-5">
                                         <div>
-                                            <h2 class="card-title font-weight-bold pt-2"><strong>{{$orderReturnsArticle->title}}</strong></h2>
-                                            <p class="hidden show-ud-up">{{$orderReturnsArticle->intro}}</p>
+                                            <h2 class="card-title font-weight-bold pt-2"><strong>{{$pages['order_returns']['title']}}</strong></h2>
+                                            <p class="hidden show-ud-up">{{$pages['order_returns']['intro']}}</p>
                                             <a class="btn btn-danger btn-sm btn-rounded clearfix d-none d-md-inline-block" href="/pages/order_returns"></i> Read more</a>
                                         </div>
                                     </div>
@@ -185,11 +183,11 @@
                             </div>
                             <!--Image -->
                         </div>
+                        <!--Grid column-->
                         @endif
-                        <!--Grid column-->
 
+                        @if(isset($pages['iphone_11']))
                         <!--Grid column-->
-                        @if(isset($iphoneArticle))
                         <div class="col-lg-4 col-md-12 mb-4">
                             <!--Image -->
                             <div class="view zoom z-depth-1 photo">
@@ -197,19 +195,17 @@
                                 <div class="mask rgba-stylish-strong">
                                     <div class="white-text center-elem text-center w-75">
                                         <div class="">
-                                            <h2 class="card-title font-weight-bold pt-2"><strong>{{$iphoneArticle->title}}</strong></h2>
-                                            <p class="">{{$iphoneArticle->intro}}</p>
+                                            <h2 class="card-title font-weight-bold pt-2"><strong>{{$pages['iphone_11']['title']}}</strong></h2>
+                                            <p class="">{{$pages['iphone_11']['intro']}}</p>
                                             <a class="btn btn-info btn-sm btn-rounded" href="/pages/iphone_11"></i> Read more</a>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!--Image -->
                         </div>
-                        @endif
                         <!--Grid column-->
-
+                        @endif
                     </div>
                     <!--Grid row-->
 
